@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Gradle Test Executor 1" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-04-06T22:18:43" hostname="Rodolfos-MacBook-Pro.local" time="0.05">
+  <properties/>
+  <testcase name="failed to execute tests" classname="Gradle Test Executor 1" time="0.05">
+    <failure message="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 1." type="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException">org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 1.
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:64)
+	at java.base@21.0.5/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.5/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: org.junit.platform.commons.JUnitException: TestEngine with ID 'junit-jupiter' failed to discover tests
+	at app//org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverEngineRoot(EngineDiscoveryOrchestrator.java:160)
+	at app//org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverSafely(EngineDiscoveryOrchestrator.java:134)
+	at app//org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discover(EngineDiscoveryOrchestrator.java:108)
+	at app//org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discover(EngineDiscoveryOrchestrator.java:80)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.discover(DefaultLauncher.java:110)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	... 16 more
+Caused by: org.junit.platform.commons.JUnitException: ClassSelector [className = 'com.example.ratelimiter.RateLimiterStressTest'] resolution failed
+	at app//org.junit.platform.launcher.listeners.discovery.AbortOnFailureLauncherDiscoveryListener.selectorProcessed(AbortOnFailureLauncherDiscoveryListener.java:39)
+	at app//org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.resolveCompletely(EngineDiscoveryRequestResolution.java:103)
+	at app//org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.run(EngineDiscoveryRequestResolution.java:83)
+	at app//org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolver.resolve(EngineDiscoveryRequestResolver.java:113)
+	at app//org.junit.jupiter.engine.discovery.DiscoverySelectorResolver.resolveSelectors(DiscoverySelectorResolver.java:46)
+	at app//org.junit.jupiter.engine.JupiterTestEngine.discover(JupiterTestEngine.java:69)
+	at app//org.junit.platform.launcher.core.EngineDiscoveryOrchestrator.discoverEngineRoot(EngineDiscoveryOrchestrator.java:152)
+	... 26 more
+Caused by: java.lang.NoSuchMethodError: 'java.util.stream.Stream org.junit.platform.commons.support.ReflectionSupport.streamNestedClasses(java.lang.Class, java.util.function.Predicate)'
+	at org.junit.jupiter.engine.discovery.ClassSelectorResolver.lambda$toResolution$12(ClassSelectorResolver.java:138)
+	at org.junit.platform.engine.support.discovery.SelectorResolver$Match.expand(SelectorResolver.java:667)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.lambda$enqueueAdditionalSelectors$1(EngineDiscoveryRequestResolution.java:110)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Collections$2.tryAdvance(Collections.java:5073)
+	at java.base/java.util.Collections$2.forEachRemaining(Collections.java:5081)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.enqueueAdditionalSelectors(EngineDiscoveryRequestResolution.java:109)
+	at org.junit.platform.engine.support.discovery.EngineDiscoveryRequestResolution.resolveCompletely(EngineDiscoveryRequestResolution.java:95)
+	... 31 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
